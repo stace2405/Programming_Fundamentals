@@ -1,0 +1,132 @@
+Travel Expense Tracker
+
+Problem Statement: 
+Write a program that prompts users to enter the name of their destination and budget amount. In a loop, ask user to enter each expense and enter zero to quit. 
+When user enters zero it terminates the loop and ouput the total. It will compare the total to the budget enter and calculate the difference and let user know 
+if they are over their budget or under their budget.
+
+
+
+1. Nouns and Verbs
+
+NOUN: name, destination, budget, loop, expense, zero 
+VERBS: prompts, enter, quit, terminates, compare, output
+
+
+2. Defining Diagram
+
+INPUT:
+destination, budget, expenses
+
+PROCESSING:
+prompt users to enter destination
+prompt users to enter budget 
+prompt users to enter each expense in a loop 
+prompt users to enter zero to terminate the loop
+calcuate total expense and compare it to buget
+output the difference
+output if user is under or over budget
+
+OUTPUT:
+output the difference
+output if user is under or over budget
+
+
+3. Solution Algorithm
+
+PSEUDOCODE:
+BudgetCalculation
+  initialize total = 0; 
+  convert budget to Number 
+  convert expenseTotal to Number
+  total = budget - expenseTotal 
+  return total 
+END 
+
+TravelExpenseTracker
+  initialize denstiation to ask Please enter you destination. 
+  initialize budget to ask Please enter your budget. 
+  initialize input
+  initialize total 
+  initialize message 
+  initialize expenseTotal 
+  
+  WHILE input !== "0"
+    input to ask "Please enter all of your expenses or enter zero to stop"
+  IF 
+    input !== "0"
+    convert input to Number
+    expenseTotal = adding all the input
+  ENDWHILE 
+  
+  total = BudgetCalculation 
+  
+  IF expenseTotal <= budget 
+    message "you are within your budget" 
+  ELSE
+    message "you are over budget"
+  ENDIF
+  display "You are traveling to + destination."
+  display "Your budget: + budget"
+  display "Total expense: + expenseTotal"
+  display message
+END
+
+
+
+4. Checking the Solution Algorithm
+
+VARIABLES: destination, budget, expense 
+
+TEST CASE 1: 
+  INPUT VALUES: Denver, 100, 50, 20, 50
+  EXPECTED RESULT:
+    You are traveling to Denver.
+    Your budget: 100
+    Total expense: 120
+    You are over budget.
+  ACTUAL RESULT:
+    You are traveling to Denver.
+    Your budget: 100
+    Total expense: 120
+    You are over budget.
+
+TEST CASE 2:
+  INPUT VALUES: Thailand, 500, 250, 100, 300
+  EXPECTED RESULT:
+    You are traveling to Thailand.
+    Your budget: 500
+    Total expense: 650
+    You are over budget.
+  ACTUAL RESULT:
+    You are traveling to Thailand.
+    Your budget: 500
+    Total expense: 650
+    You are over budget.
+
+TEST CASE 3: 
+  INPUT VALUES: London, 250, 150, 100
+  EXPECTED RESULT:
+    You are traveling to London.
+    Your budget: 250
+    Total expense: 250
+    You are within your budget.
+  ACTUAL RESULT:
+    You are traveling to London.
+    Your budget: 250
+    Total expense: 250
+    You are within your budget.
+ 
+TEST CASE 4: 
+  INPUT VALUES: Paris, 100, 50, 20
+  EXPECTED RESULT:
+    You are traveling to Paris.
+    Your budget: 100
+    Total expense: 70
+    You are within your budget.
+  ACTUAL RESULT:
+    You are traveling to Paris.
+    Your budget: 100
+    Total expense: 70
+    You are within your budget.
+      
